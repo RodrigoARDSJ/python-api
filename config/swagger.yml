@@ -1,0 +1,112 @@
+swagger: "2.0"
+info:
+  title: API jogos
+  description: Api Básica com Python
+  version: 1.0.0
+host: localhost:5000
+basePath: /
+schemes:
+  - http
+paths:
+  /jogos:
+    post:
+      tags:
+        - jogos
+      summary: Add a new Enveto in database
+      decription: Post new jogo in database
+      parameters:
+        - in: body
+          type: object
+          name: jogo
+          description: exemplo de jogo
+          properties:
+            nome:
+              type: string
+              example: nerdZão
+            descricao:
+              type: string
+              example: Desenvolvimento Web
+      responses:
+        201:
+          description: CREATED
+        400:
+          description: BAD_REQUEST
+    get:
+      tags:
+        - jogos
+      summary: Returns a list of jogos.
+      description: Retorna uma lista de jogos.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+        204:
+          description: NO_CONTENT
+        404:
+          description: NOT_FOUND
+
+  /jogos/{id}:
+    get:
+      tags:
+        - jogos
+      summary: Returns a jogo by ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          type: integer
+          minimum: 1
+          description: Parameter description in Markdown.
+      responses:
+        200:
+          description: OK
+        404:
+          description: NOT_FOUND
+
+    put:
+      tags:
+        - jogos
+      summary: Update all parameters of an jogo by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          type: integer
+          minimum: 1
+          description: Parameter description in Markdown.
+        - in: body
+          type: object
+          name: Envento
+          description: exemplo de jogo
+          properties:
+            nome:
+              type: string
+              example: NerdZão
+            descricao:
+              type: string
+              example: Desenvolvimento Web
+      responses:
+        200:
+          description: OK
+        400:
+          description: BAD_REQUEST
+        404:
+          description: NOT_FOUND
+
+    delete:
+      tags:
+        - jogos
+      summary: Delete an jogo by ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          type: integer
+          minimum: 1
+          description: Parameter description in Markdown.
+      responses:
+        204:
+          description: NO_CONTENT
+        404:
+          description: NOT_FOUND
