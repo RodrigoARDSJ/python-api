@@ -1,0 +1,447 @@
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+Exception on /jogos [GET]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dev/dev/back-end/python/eventos/controller/jogoController.py", line 16, in get_all_jogos
+    jogos = [(jogo.__str__()) for jogo in jogo_service.listar_jogos()]
+AttributeError: 'JogoService' object has no attribute 'listar_jogos'
+127.0.0.1 - - [14/Oct/2022 10:04:15] "[35m[1mGET /jogos HTTP/1.1[0m" 500 -
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1785, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1767, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1666, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1606, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/dev/dev/back-end/python/eventos/app.py", line 17, in page_not_found
+    return send_from_directory(f'{os.getcwd()}/templates', 'not-found.html'), 404
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/helpers.py", line 590, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/utils.py", line 586, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+127.0.0.1 - - [14/Oct/2022 10:04:15] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+Exception on /jogoo [GET]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1785, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1767, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1666, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1606, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/dev/dev/back-end/python/eventos/app.py", line 17, in page_not_found
+    return send_from_directory(f'{os.getcwd()}/templates', 'not-found.html'), 404
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/helpers.py", line 590, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/utils.py", line 586, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+127.0.0.1 - - [14/Oct/2022 10:04:20] "[35m[1mGET /jogoo HTTP/1.1[0m" 500 -
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1785, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1767, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1666, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1606, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/dev/dev/back-end/python/eventos/app.py", line 17, in page_not_found
+    return send_from_directory(f'{os.getcwd()}/templates', 'not-found.html'), 404
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/helpers.py", line 590, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/utils.py", line 586, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+127.0.0.1 - - [14/Oct/2022 10:04:20] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+Exception on /jogo [GET]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1785, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1767, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1666, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1606, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/dev/dev/back-end/python/eventos/app.py", line 17, in page_not_found
+    return send_from_directory(f'{os.getcwd()}/templates', 'not-found.html'), 404
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/helpers.py", line 590, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/utils.py", line 586, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+127.0.0.1 - - [14/Oct/2022 10:04:28] "[35m[1mGET /jogo HTTP/1.1[0m" 500 -
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1785, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1767, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1666, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1606, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/dev/dev/back-end/python/eventos/app.py", line 17, in page_not_found
+    return send_from_directory(f'{os.getcwd()}/templates', 'not-found.html'), 404
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/helpers.py", line 590, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/utils.py", line 586, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+127.0.0.1 - - [14/Oct/2022 10:04:28] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+Exception on /evemtos [GET]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1785, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1767, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1666, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1606, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/dev/dev/back-end/python/eventos/app.py", line 17, in page_not_found
+    return send_from_directory(f'{os.getcwd()}/templates', 'not-found.html'), 404
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/helpers.py", line 590, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/utils.py", line 586, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+127.0.0.1 - - [14/Oct/2022 10:04:35] "[35m[1mGET /evemtos HTTP/1.1[0m" 500 -
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1785, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1767, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1666, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1606, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/dev/dev/back-end/python/eventos/app.py", line 17, in page_not_found
+    return send_from_directory(f'{os.getcwd()}/templates', 'not-found.html'), 404
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/helpers.py", line 590, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/utils.py", line 586, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+127.0.0.1 - - [14/Oct/2022 10:04:35] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+Exception on /eventos [GET]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1785, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1767, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1666, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1606, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/dev/dev/back-end/python/eventos/app.py", line 17, in page_not_found
+    return send_from_directory(f'{os.getcwd()}/templates', 'not-found.html'), 404
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/helpers.py", line 590, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/utils.py", line 586, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+127.0.0.1 - - [14/Oct/2022 10:04:41] "[35m[1mGET /eventos HTTP/1.1[0m" 500 -
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1785, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1767, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1666, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1606, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/dev/dev/back-end/python/eventos/app.py", line 17, in page_not_found
+    return send_from_directory(f'{os.getcwd()}/templates', 'not-found.html'), 404
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/helpers.py", line 590, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/home/dev/.local/lib/python3.8/site-packages/werkzeug/utils.py", line 586, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+127.0.0.1 - - [14/Oct/2022 10:04:41] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [14/Oct/2022 10:05:04] "GET /swagger/ HTTP/1.1" 200 -
+127.0.0.1 - - [14/Oct/2022 10:05:04] "[32mGET /swagger//index.css HTTP/1.1[0m" 308 -
+127.0.0.1 - - [14/Oct/2022 10:05:04] "[32mGET /swagger//swagger-ui.css HTTP/1.1[0m" 308 -
+127.0.0.1 - - [14/Oct/2022 10:05:04] "[32mGET /swagger//swagger-ui-bundle.js HTTP/1.1[0m" 308 -
+127.0.0.1 - - [14/Oct/2022 10:05:04] "[32mGET /swagger//swagger-ui-standalone-preset.js HTTP/1.1[0m" 308 -
+127.0.0.1 - - [14/Oct/2022 10:05:04] "GET /swagger/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+127.0.0.1 - - [14/Oct/2022 10:05:04] "GET /swagger/index.css HTTP/1.1" 200 -
+127.0.0.1 - - [14/Oct/2022 10:05:04] "GET /swagger/swagger-ui.css HTTP/1.1" 200 -
+127.0.0.1 - - [14/Oct/2022 10:05:04] "GET /swagger/swagger-ui-bundle.js HTTP/1.1" 200 -
+127.0.0.1 - - [14/Oct/2022 10:05:05] "GET /config/swagger.yml HTTP/1.1" 200 -
+127.0.0.1 - - [14/Oct/2022 10:05:05] "[32mGET /swagger//favicon-32x32.png HTTP/1.1[0m" 308 -
+127.0.0.1 - - [14/Oct/2022 10:05:05] "GET /swagger/favicon-32x32.png HTTP/1.1" 200 -
+INICIANDO METODO PARA BUSCAR UM JOGO
+Exception on /jogos/1 [GET]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dev/dev/back-end/python/eventos/controller/jogoController.py", line 27, in get_jogo_by_id
+    jogo = jogo_service.busca_por_id(id)
+  File "/home/dev/dev/back-end/python/eventos/service/jogoService.py", line 51, in busca_por_id
+    app.logger.info("BUSCANDO JOGO PELO ID " + id)
+TypeError: can only concatenate str (not "int") to str
+127.0.0.1 - - [14/Oct/2022 10:05:37] "[35m[1mGET /jogos/1 HTTP/1.1[0m" 500 -
+INICIANDO METODO PARA CADASTRAR UM JOGO
+JOGO CADASTRADO
+FINALIZANDO METODO DE CADASTRO
+127.0.0.1 - - [14/Oct/2022 10:06:11] "[35m[1mPOST /jogos HTTP/1.1[0m" 201 -
+Exception on /jogos [GET]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dev/dev/back-end/python/eventos/controller/jogoController.py", line 16, in get_all_jogos
+    jogos = [(jogo.__str__()) for jogo in jogo_service.listar_jogos()]
+AttributeError: 'JogoService' object has no attribute 'listar_jogos'
+127.0.0.1 - - [14/Oct/2022 10:06:27] "[35m[1mGET /jogos HTTP/1.1[0m" 500 -
+Exception on /jogos [GET]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dev/dev/back-end/python/eventos/controller/jogoController.py", line 16, in get_all_jogos
+    jogos = [(jogo.__str__()) for jogo in jogo_service.listar_jogos()]
+AttributeError: 'JogoService' object has no attribute 'listar_jogos'
+127.0.0.1 - - [14/Oct/2022 10:07:00] "[35m[1mGET /jogos HTTP/1.1[0m" 500 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+INICIANDO METODO DE LISTAGEM  DE JOGOS
+LISTANDO TODOS OS JOGOS
+127.0.0.1 - - [14/Oct/2022 10:08:28] "GET /jogos HTTP/1.1" 200 -
+INICIANDO METODO DE LISTAGEM  DE JOGOS
+LISTANDO TODOS OS JOGOS
+127.0.0.1 - - [14/Oct/2022 10:08:51] "GET /jogos HTTP/1.1" 200 -
+INICIANDO METODO PARA BUSCAR UM JOGO
+Exception on /jogos/1 [GET]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dev/dev/back-end/python/eventos/controller/jogoController.py", line 27, in get_jogo_by_id
+    jogo = jogo_service.busca_por_id(id)
+  File "/home/dev/dev/back-end/python/eventos/service/jogoService.py", line 51, in busca_por_id
+    app.logger.info("BUSCANDO JOGO PELO ID " + id)
+TypeError: can only concatenate str (not "int") to str
+127.0.0.1 - - [14/Oct/2022 10:09:00] "[35m[1mGET /jogos/1 HTTP/1.1[0m" 500 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+INICIANDO METODO PARA BUSCAR UM JOGO
+BUSCANDO JOGO PELO ID 
+FINALIZANDO METODO DE BUSCAR JOGO
+127.0.0.1 - - [14/Oct/2022 10:09:33] "GET /jogos/1 HTTP/1.1" 200 -
+INICIANDO METODO PARA ATUALIZAR UM JOGO
+JOGO CADASTRADO COM SUCESSO
+Exception on /jogos/1 [PUT]
+Traceback (most recent call last):
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/.local/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dev/dev/back-end/python/eventos/controller/jogoController.py", line 54, in att_jogo
+    elif "atributo" in response:
+TypeError: argument of type 'Jogo' is not iterable
+127.0.0.1 - - [14/Oct/2022 10:09:47] "[35m[1mPUT /jogos/1 HTTP/1.1[0m" 500 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [14/Oct/2022 10:14:27] "GET /swagger/ HTTP/1.1" 200 -
+127.0.0.1 - - [14/Oct/2022 10:14:27] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [14/Oct/2022 10:14:27] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [14/Oct/2022 10:14:27] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [14/Oct/2022 10:14:27] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [14/Oct/2022 10:14:27] "[36mGET /config/swagger.yml HTTP/1.1[0m" 304 -
+127.0.0.1 - - [14/Oct/2022 10:14:27] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+INICIANDO METODO PARA ATUALIZAR UM JOGO
+JOGO CADASTRADO COM SUCESSO
+127.0.0.1 - - [14/Oct/2022 10:14:34] "PUT /jogos/1 HTTP/1.1" 200 -
+INICIANDO METODO DE DELETAR JOGO
+JOGO DELETADO COM SUCESSO
+FINALIZANDO METODO DELETAR
+127.0.0.1 - - [14/Oct/2022 10:14:42] "[33mDELETE /jogos/1 HTTP/1.1[0m" 404 -
+127.0.0.1 - - [14/Oct/2022 10:15:16] "GET /swagger/ HTTP/1.1" 200 -
+127.0.0.1 - - [14/Oct/2022 10:15:17] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [14/Oct/2022 10:15:17] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [14/Oct/2022 10:15:17] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [14/Oct/2022 10:15:17] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [14/Oct/2022 10:15:17] "[36mGET /config/swagger.yml HTTP/1.1[0m" 304 -

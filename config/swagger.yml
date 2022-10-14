@@ -77,7 +77,7 @@ paths:
           description: Parameter description in Markdown.
         - in: body
           type: object
-          name: Envento
+          name: Jogos
           description: exemplo de jogo
           properties:
             nome:

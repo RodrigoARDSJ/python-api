@@ -48,7 +48,7 @@ def add_jogo() -> Any:
 def att_jogo(id) -> Any:
     jogo = request.get_json()
     response = jogo_service.atualizar(jogo, id)
-    if type(response) is jogo:
+    if type(response) is Jogo:
         retorno = json.dumps(response.__str__())
         return Response(retorno, status=200, mimetype='application/json')
     elif "atributo" in response:

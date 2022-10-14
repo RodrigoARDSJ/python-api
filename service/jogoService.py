@@ -40,7 +40,7 @@ class JogoService:
     def __init__(self):
         self.__jogo_dao = JogoDaoSemBanco()
 
-    def listar_jogo(self) -> list:
+    def listar_jogos(self) -> list:
         app.logger.info("INICIANDO METODO DE LISTAGEM  DE JOGOS")
         app.logger.info("LISTANDO TODOS OS JOGOS")
         return self.__jogo_dao.find_all()
@@ -48,7 +48,7 @@ class JogoService:
     def busca_por_id(self, id) -> Any:
         app.logger.info("INICIANDO METODO PARA BUSCAR UM JOGO")
         jogo = self.__jogo_dao.find_by_id(id)
-        app.logger.info("BUSCANDO JOGO PELO ID " + id)
+        app.logger.info("BUSCANDO JOGO PELO ID ")
         if jogo is None:
             app.logger.info("FINALIZANDO METODO DE BUSCAR JOGo")
             return False
