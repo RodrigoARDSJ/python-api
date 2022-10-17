@@ -3,7 +3,7 @@
 Na pasta do projeto em um terminal, você deve colocar os seguintes comandos:
 
 ```
-docker build -t python-api -f Dockerfile .
+sudo docker build -t python-api -f Dockerfile .
 ```
 
 ```
