@@ -1,15 +1,18 @@
+from time import asctime
 from typing import Any
 from flask import Flask
-
 from dao.jogoDaoSemBanco import JogoDaoSemBanco
 from model.jogo import Jogo
-import logging
 from logging.config import dictConfig
+from pathlib import Path
+
+import logging
+
 
 dictConfig({
     'version': 1,
     'formatters': {'default': {
-        'format': '[%(asctime)s] %(levelname)s in %(module)s: %(message)s',
+        'format': '[%(asctime)s] %(levelname)s %(message)s',
     }},
     'handlers': {'wsgi': {
         'class': 'logging.StreamHandler',
@@ -22,16 +25,17 @@ dictConfig({
     }
 })
 
+path = Path('/home/dev/logs').mkdir(exist_ok=True)
 
-Log_Format = "%(levelname)s %(asctime)s - %(message)s"
-
-logging.basicConfig(filename = "logfile.log",
-                    filemode = "w",
-                    format = Log_Format, 
-                    level = logging.ERROR)
+logging.basicConfig(filename = "/home/dev/logs/python-log.log",
+                    filemode = "a",
+                    format = '%(asctime)s %(name)s %(levelname)s %(message)s',
+                    level=logging.INFO)
 
 logger = logging.getLogger()
-handler = logging.FileHandler('logfile.log')
+handler = logging.FileHandler('/home/dev/logs/python-log.log')
+formartter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+handler.setFormatter(formartter)
 logger.addHandler(handler)
 
 app = Flask(__name__)

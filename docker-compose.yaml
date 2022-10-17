@@ -1,0 +1,15 @@
+version: '2.2'
+services:
+  api:
+    container_name: api-python
+    image: api-python
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - '5000:5000'
+    restart: always
+    stdin_open: true
+    tty: true
+    volumes:
+      - /home/dev/logs:/home/dev/logs
